@@ -84,7 +84,9 @@ function init() {
     }
   }
 
+  // NOTE モデルデータ
   const modelFile = "models/mmd/miku/miku_v2.pmd";
+  // NOTE モーションファイル
   const vmdFiles = ["models/mmd/vmds/wavefile_v2.vmd"];
 
   helper = new MMDAnimationHelper({
@@ -98,6 +100,7 @@ function init() {
     vmdFiles,
     function (mmd) {
       mesh = mmd.mesh;
+      // NOTE モデルの上下位置を調整
       mesh.position.y = -10;
       scene.add(mesh);
 
